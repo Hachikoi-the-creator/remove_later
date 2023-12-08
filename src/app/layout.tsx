@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
+import Link from "next/link";
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -15,8 +16,33 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
-    </html>
-  )
+      <html lang="en">
+          <body className={inter.className}>
+              <nav className="flex gap-6 bg-slate-500">
+                  <Link className="bg-blue-300 p-2 rounded-md" href={"/"}>
+                      Home
+                  </Link>
+                  <Link
+                      className="bg-blue-300 p-2 rounded-md"
+                      href={"/testing/arbolito777"}
+                  >
+                      Dynamic @testing/[any]
+                  </Link>
+                  <Link
+                      className="bg-blue-300 p-2 rounded-md"
+                      href={"/my-property-the-best"}
+                  >
+                      Dynamic @[details]
+                  </Link>
+                  <Link
+                      className="bg-blue-300 p-2 rounded-md"
+                      href={"/search/the-error-and-fix-it"}
+                  >
+                      Dynamic @search/[searchSlug]
+                  </Link>
+              </nav>
+              {children}
+          </body>
+      </html>
+  );
 }
