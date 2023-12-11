@@ -27,3 +27,12 @@ export default async function page() {
         </div>
     );
 }
+
+export async function generateStaticParams() {
+    return [
+        { searchSlug: "test1" },
+        { searchSlug: "test2" },
+        { searchSlug: "test3" },
+        { searchSlug: "test4" },
+    ];
+}
