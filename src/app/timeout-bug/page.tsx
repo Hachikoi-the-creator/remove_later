@@ -49,6 +49,9 @@ export default function Page() {
             setTimeLeft(45);
             setCountdownRestart((prev) => prev + 1);
             setIsLoading(true);
+            setTimeout(() => {
+                setIsLoading(false)
+            }, 2000);
 
             console.log("existent user res");
         };
