@@ -40,6 +40,12 @@ export default function RootLayout({
                   >
                       Dynamic @search/[searchSlug]
                   </Link>
+                  <Link
+                      className="bg-blue-300 p-2 rounded-md"
+                      href={"/timeout-bug"}
+                  >
+                      Testing timeout in vercel
+                  </Link>
               </nav>
               {children}
           </body>
