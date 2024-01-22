@@ -3,7 +3,7 @@
 import { useRouter } from "next/navigation";
 import { useEffect, useState, type ChangeEvent } from "react";
 
-export default function page() {
+export default function Page() {
     const router = useRouter();
     const [timeLeft, setTimeLeft] = useState(13);
     const [loginCode, setLoginCode] = useState("");
