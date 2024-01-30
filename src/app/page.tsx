@@ -1,8 +1,9 @@
 import React from "react";
+import WhyHeyHom from "~/components/WhyHereHom";
 
 export default function page() {
     return (
-        <div>
+        <div className="container">
             <h1>Testing wats link</h1>
             <a
                 href={`https://wa.me/${5215592252223}/?text=${encodeURIComponent(
@@ -18,6 +19,7 @@ export default function page() {
             >
                 10 nums link
             </a>
+            <WhyHeyHom />
         </div>
     );
 }
