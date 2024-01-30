@@ -1,42 +1,15 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
 
-import type { TwMainColor, TwMainColorWithSuffix30 } from "~/data/types";
 import { cn } from "~/lib/utils";
 
 export type BadgeProps = {
     className?: string;
     name: ReactNode;
-    color?: TwMainColorWithSuffix30;
+    color?: string;
     href?: string;
 };
 
-const hexCompanyColors: Record<TwMainColor, string> = {
-    darkBlue100: "#100E2D",
-    darkBlue80: "#3F3E57",
-    darkBlue50: "#878696",
-    darkBlue30: "#C2C2C2",
-    blue100: "#2338B5",
-    blue80: "#4F5FC3",
-    blue50: "#919BDA",
-    blue30: "#BDC3E8",
-    lightblue100: "#00B2E3",
-    lightblue80: "#33C1E8",
-    lightblue50: "#80D8F1",
-    lightblue30: "#B3E8F6",
-    green100: "#8BD631",
-    green80: "#A2DE5A",
-    green50: "#C5EA98",
-    green30: "#DCF2C1",
-    orange100: "#FFA400",
-    orange80: "#FFB633",
-    orange50: "#FFD180",
-    orange30: "#FFE3B3",
-    purple100: "#3D1152",
-    purple80: "#634074",
-    purple50: "#9E88A8",
-    purple30: "#C5B8CB",
-};
 
 /**
  *
@@ -50,7 +23,7 @@ export default function Badge({
     href,
 }: BadgeProps) {
     const styleBg = {
-        backgroundColor: hexCompanyColors[color],
+        backgroundColor: "#C5EA98",
         color: "black",
     };
 
