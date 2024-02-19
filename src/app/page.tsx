@@ -1,4 +1,6 @@
+import Link from "next/link";
 import React from "react";
+import QueryTest from "~/components/QueryTest";
 import WhyHeyHom from "~/components/WhyHereHom";
 
 export default function page() {
@@ -19,7 +21,13 @@ export default function page() {
             >
                 10 nums link
             </a>
+            <QueryTest/>
             <WhyHeyHom />
+
+            <Link href={{
+                pathname: "/",
+                query: { gallery: "open" }
+            }}>Open gallery w/link</Link>
         </div>
     );
 }
